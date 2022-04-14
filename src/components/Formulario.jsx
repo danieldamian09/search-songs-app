@@ -7,7 +7,7 @@ const Formulario = () => {
 		cancion: "",
 	});
 
-	const {setAlerta, busquedaLetra} = useLetras();
+	const { busquedaLetra} = useLetras();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -19,7 +19,7 @@ const Formulario = () => {
 		}
 
 		busquedaLetra(busqueda);
-		setAlerta("")
+		
 	};
 
 	return (

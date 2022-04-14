@@ -1,9 +1,10 @@
 import Formulario from "./Formulario";
 import Alerta from "./Alerta";
 import useLetras from "../hooks/useLetras";
+import Letras from "./Letras";
 
 const AppLetras = () => {
-	const {alerta} = useLetras();
+	const {alerta, letra, cargando} = useLetras();
 
 	return (
 		<>
@@ -12,7 +13,15 @@ const AppLetras = () => {
 			<Formulario />
 
 			<main>
-				{alerta && <Alerta>{alerta}</Alerta>}
+				{alerta ? (
+					<Alerta>{alerta}</Alerta>
+				) : letra ? (
+					<Letras />
+				) : cargando ? (
+					"Cargando"
+				) : (
+					<p className="text-center">Busca letras de tus artistas favoritos</p>
+				)}
 			</main>
 		</>
 	);
