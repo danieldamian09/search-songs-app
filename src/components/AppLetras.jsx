@@ -1,15 +1,19 @@
-import Formulario from "./Formulario"
+import Formulario from "./Formulario";
+import Alerta from "./Alerta";
+import useLetras from "../hooks/useLetras";
 
 const AppLetras = () => {
-  return (
-    <>
-      <header>Búsqueda de letras de Caciónes</header>
+	const {alerta} = useLetras();
 
-      <Formulario />
+	return (
+		<>
+			<header>Búsqueda de letras de Caciónes</header>
 
-      <main></main>
-    </>
-  )
-}
+			<Formulario />
 
-export default AppLetras
+			<main>{alerta && <Alerta>{alerta}</Alerta>}</main>
+		</>
+	);
+};
+
+export default AppLetras;
