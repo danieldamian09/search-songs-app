@@ -2,7 +2,11 @@ import React from 'react'
 
 const AppLetras = () => {
   return (
-    <div>AppLetras</div>
+    <>
+      <header>Búsqueda de letras de Caciónes</header>
+
+      <main></main>
+    </>
   )
 }
 
