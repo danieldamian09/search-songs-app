@@ -1,10 +1,12 @@
-import AppLetras from "./components/AppLetras"
+import AppLetras from "./components/AppLetras";
+import {LetrasProvider} from "./context/LetrasProvider";
 
 function App() {
-
-  return (
-      <AppLetras />
-  )
+	return (
+		<LetrasProvider>
+			<AppLetras />
+		</LetrasProvider>
+	);
 }
 
-export default App
+export default App;
