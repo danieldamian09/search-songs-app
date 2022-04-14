@@ -11,7 +11,9 @@ const AppLetras = () => {
 
 			<Formulario />
 
-			<main>{alerta && <Alerta>{alerta}</Alerta>}</main>
+			<main>
+				{alerta && <Alerta>{alerta}</Alerta>}
+			</main>
 		</>
 	);
 };
